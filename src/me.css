@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 120px;
     padding-bottom: 80px;
     position: relative;
     overflow-y: auto;
@@ -81,8 +81,8 @@ body {
 
 .contenedor {
     max-width: 500px;
-    margin: 40px auto;
-    padding: 30px;
+    margin: 60px auto;
+    padding: 40px;
     border: 2px solid white;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
@@ -93,12 +93,22 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 3.5em;
+    margin-bottom: 80px;
+    margin-top: 70px;
     font-family: 'Amoria', sans-serif;
     text-align: center;
     width: 100%;
     color: white;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 60px;
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 input[type="date"] {
@@ -125,8 +135,15 @@ input[type="date"] {
     font-weight: bold;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
     font-family: 'Amoria', sans-serif;
     margin: 0 auto;
+}
+
+.sign-button:hover {
+    transition: 0.3s ease-in-out;
+    background: gold;
+    color: rgb(0, 0, 0);
 }
 
 .resultado {
@@ -134,6 +151,14 @@ input[type="date"] {
     color: white;
     text-align: center;
     width: 100%;
+    margin: 30px 0;
+    line-height: 1;
+}
+
+.resultado strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.4em;
 }
 
 .resultado-container {
@@ -141,6 +166,7 @@ input[type="date"] {
     margin: 20px auto;
     padding: 30px;
     border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     display: none;
     flex-direction: column;
@@ -165,6 +191,14 @@ input[type="date"] {
     font-family: 'Amoria', sans-serif;
     margin-top: 20px;
     display: none;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.filter-button:hover {
+    transition: 0.3s ease-in-out;
+    background: gold;
+    color: rgb(0, 0, 0);
 }
 
 .resultado:not(:empty) ~ .filter-button {

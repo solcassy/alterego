@@ -49,7 +49,7 @@ function verSigno() {
         
         Libra: "⚖️All about harmony. Libra needs balance like air. Loves conversation, beautiful surroundings, and mediating even in silence. They know what looks good... and what feels better.",
         
-        Scorpio: "Scorpio sees beyond. Their gaze pierces, and their heart is volcanic—guarding secrets. They don't play games, and if they trust you, it's for life.",
+        Scorpio: "🦂Scorpio sees beyond. Their gaze pierces, and their heart is volcanic—guarding secrets. They don't play games, and if they trust you, it's for life.",
         
         Sagittarius: "🏹Laughs loud, thinks big, and never stays still. Sagittarius moves through life like an unmapped journey: it's all about the road, the freedom, and the stories they leave behind.",
         

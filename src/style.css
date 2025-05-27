@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Amoria';
-    src: url('fonts/AMORIA.ttf') format('truetype');
+    src: url('/src/fonts/amoria-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
