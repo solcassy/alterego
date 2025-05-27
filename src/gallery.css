@@ -81,3 +81,27 @@ body {
     mix-blend-mode: difference;
     transform: translate(-50%, -50%);
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .header-box, .footer-box {
+        height: 60px;
+        gap: 2rem;
+    }
+
+    .header-text, .footer-text {
+        font-size: 1.2rem;
+    }
+
+    .cursor {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .header-box, .footer-box {
+        height: 70px;
+        gap: 4rem;
+    }
+}

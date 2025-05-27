@@ -103,6 +103,39 @@ body {
     height: 200px;
   }
   
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .header-box {
+        height: 50px;
+        padding: 0 1rem;
+    }
+
+    .header-text {
+        font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    .header-box {
+        height: 55px;
+        padding: 0 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    h1 {
+        font-size: 8rem;
+    }
+  }
+  
   
   
 
