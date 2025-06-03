@@ -5,51 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/src/me.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
     <script src="/src/me.js"></script>
-    
-
 </head>
 <body>
     <div class="header-box">
         <a href="index.html" class="header-text">SOLCASS</a>
-
         <a href="gallery.html" class="header-text">GALLERY</a>
         <a href="about.html" class="header-text">ABOUT</a>
     </div>
     <h1 class="text-6xl font-amoria">Try on your sign!</h1>
     <img src="img/IMG_3228.PNG" alt="me" class="me-img" width="600">
 
-
     <p class="text-white text-center text-xl md:text-xl font-light mb-6">
         ✦ Welcome to the SOLCASS Zodiac Experience ✦<br>
         Drop your birthdate and receive your cosmic filter 🌠
-      </p>
-      
+    </p>
 
     <div class="contenedor">
-        <h1 class="text-4xl font-amoria">Insert your Birthdate!
-        </h1>
+        <h1 class="text-4xl font-amoria">Insert your Birthdate!</h1>
         <input type="date" id="fechaNacimiento">
         <button onclick="verSigno()" class="sign-button">MY SIGN</button>
-    
-        
-      </div>
-      <div class="resultado-container">
-        <div id="resultado" class="resultado"></div>
-        <script src="https://cdn.tailwindcss.com"></script>
+    </div>
 
-        <button onclick="viewFilter()" class="filter-button">View My Filter</button>
-      </div>
-     
-      
+    <div class="resultado-container">
+        <div id="resultado" class="resultado"></div>
+        <button onclick="viewFilter()" class="filter-button" style="display: none;">View My Filter</button>
+    </div>
+
+    <div id="camera-container" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 300px; z-index: 1000; background: black; border-radius: 10px; overflow: hidden;">
+        <video id="video" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <canvas id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+        <button onclick="closeCamera()" style="position: absolute; top: 10px; right: 10px; z-index: 1001; background: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">Close Camera</button>
+    </div>
 
     <div class="footer-box">
-        <a href="https://www.instagram.com/yomarisol/" class="footer-text"><img src="icon/insta.png" alt="Instagram" width="30">
-        </a>
-       <a href="https://github.com/solcassy" class="footer-text"><img src="icon/github.png" alt="Github" width="30">
-       </a>
-       <a href="https://mx.pinterest.com/marisolsaca/" class="footer-text"><img src="icon/pinterest.png" alt="Pinterest" width="30">
+        <a href="https://www.instagram.com/yomarisol/" class="footer-text"><img src="icon/insta.png" alt="Instagram" width="30"></a>
+        <a href="https://github.com/solcassy" class="footer-text"><img src="icon/github.png" alt="Github" width="30"></a>
+        <a href="https://mx.pinterest.com/marisolsaca/" class="footer-text"><img src="icon/pinterest.png" alt="Pinterest" width="30"></a>
     </div>
+
     <div class="cursor"></div>
     <script>
         const cursor = document.querySelector('.cursor');

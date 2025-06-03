@@ -259,7 +259,7 @@ div{
     h1 {
         font-size: 2.5em;
         margin-bottom: 40px;
-        margin-top: 35px;
+        margin-top: 40px;
     }
 
     h3 {
@@ -269,8 +269,8 @@ div{
 
     .contenedor {
         max-width: 90%;
-        margin: 30px auto;
         padding: 20px;
+        margin: 30px auto;
     }
 
     .resultado-container {
@@ -283,7 +283,6 @@ div{
     }
 
     .sign-button {
-        padding: 10px 16px;
         font-size: 0.8em;
     }
 }
