@@ -10,6 +10,9 @@ body {
     padding: 0;
     background: black;
     font-family: 'Amoria', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px; /* Add padding to account for footer height */
 }
 
 .header-box {
@@ -40,7 +43,7 @@ body {
     transform: scale(1.08);
 }
 .footer-box {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -54,7 +57,8 @@ body {
     box-shadow: 0 0 10px 0 rgba(165, 165, 165, 0.5);
     z-index: 2;
     transform: translateX(0);
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-text {
@@ -71,16 +75,41 @@ body {
 }
 
 .cursor {
-    width: 20px;
-    height: 20px;
+    width: 100px;
+    height: 100px;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, rgba(255,215,0,0) 60%);
     border-radius: 50%;
-    mix-blend-mode: difference;
     transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    will-change: transform;
 }
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 3px gold;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
@@ -96,6 +125,7 @@ body {
     .cursor {
         width: 15px;
         height: 15px;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
     }
 }
 
