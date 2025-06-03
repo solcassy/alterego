@@ -222,4 +222,30 @@ function obtenerFiltroPorSigno(signo) {
     
     return filtros[signo] || "No encontré tu filtro... ¿Eres de otro planeta?";
 }
+
+function downloadImage() {
+    const overlay = document.getElementById('overlay');
+    const link = document.createElement('a');
+    
+    // Get the current zodiac sign for the filename
+    const filename = `${currentSign}_filter_${new Date().toISOString().slice(0,10)}.png`;
+    
+    // Convert canvas to blob
+    overlay.toBlob((blob) => {
+        // Create object URL
+        const url = URL.createObjectURL(blob);
+        
+        // Set up download link
+        link.href = url;
+        link.download = filename;
+        
+        // Trigger download
+        document.body.appendChild(link);
+        link.click();
+        
+        // Clean up
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }, 'image/png');
+}
   
