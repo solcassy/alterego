@@ -1,14 +1,40 @@
-// script.js
+import * as faceapi from 'face-api.js';
+
+// Variables globales
 let currentSign = '';
 let currentStream = null;
 let filterImage = null;
 let faceMesh = null;
 
+// Elementos del DOM
+const seeSignBtn = document.getElementById('see-sign-btn');
+const viewFilterBtn = document.getElementById('view-filter-btn');
+const closeCameraBtn = document.getElementById('close-camera-btn');
+const downloadImageBtn = document.getElementById('download-image-btn');
+const cursor = document.querySelector('.cursor');
+
+// Event Listeners
+seeSignBtn.addEventListener('click', verSigno);
+viewFilterBtn.addEventListener('click', viewFilter);
+closeCameraBtn.addEventListener('click', closeCamera);
+downloadImageBtn.addEventListener('click', downloadImage);
+
+// Cursor movement
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
 async function loadFaceAPI() {
-    await Promise.all([
-        faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-        faceapi.nets.faceLandmark68Net.loadFromUri('/models')
-    ]);
+    try {
+        await Promise.all([
+            faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+            faceapi.nets.faceLandmark68Net.loadFromUri('/models')
+        ]);
+        console.log('Face-API models loaded successfully');
+    } catch (error) {
+        console.error('Error loading Face-API models:', error);
+    }
 }
 
 // Load face-api models when the page loads
