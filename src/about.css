@@ -76,11 +76,11 @@ body {
 .about-text {
     font-size: 1.2em;
     color: white;
-    text-align: center;
+    text-align: left;
     width: 100%;
     line-height: 1.8;
     margin-bottom: 30px;
-    font-family: 'Amoria', sans-serif;
+    font-family: monospace;
 }
 
 .footer-box {

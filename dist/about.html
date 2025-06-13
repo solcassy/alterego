@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" crossorigin href="/solcass/assets/about-Bws_S64p.css">
+</head>
+<body>
+    <div class="header-box">
+        <a href="index.html" class="header-text">SOLCASS</a>
+        
+        <a href="gallery.html" class="header-text">GALLERY</a>
+        <a href="about.html" class="header-text">ABOUT</a>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 40px; min-height: 80vh; margin-top: 20px;">
+        <div class="about-container" style="max-width: 500px;">
+            <h1 class="about-title">About me</h1>
+
+            <p class="about-text">My alter ego is not just a persona — it's a portal.
+                It exists somewhere between who I am and who I dream of becoming.
+                Bold, intuitive, radiant, and a little unreal.
+                She glows in colors I sometimes hide. She dares where I hesitate.
+                She is made of glitter, fire, and late-night thoughts.
+                Through her, I express without filter, I create without fear.
+                She isn't fake. She's just the version of me that doesn't ask for permission.
+                She helps me take up space — beautifully, unapologetically.</p>
+        </div>
+        <img src="/solcass/assets/IMG_0766-Bgb82hZn.JPG" alt="solcassy" class="about-image" width="30%" style="border-radius: 20px;">
+    </div>
+
+    <div class="footer-box">
+        <a href="https://www.instagram.com/yomarisol/" class="footer-text"><img src="icon/insta.png" alt="Instagram" width="30">
+        </a>
+       <a href="https://github.com/solcassy" class="footer-text"><img src="icon/github.png" alt="Github" width="30">
+       </a>
+       <a href="https://mx.pinterest.com/marisolsaca/" class="footer-text"><img src="icon/pinterest.png" alt="Pinterest" width="30">
+    </div>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+    <script src="/src/about.js"></script>
+</body>
+</html>

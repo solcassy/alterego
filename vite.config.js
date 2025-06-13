@@ -3,7 +3,7 @@ import { glob } from 'glob'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/solcassy/',
+  base: '/solcass/',
   build: {
     rollupOptions: {
       input: glob.sync('*.html').reduce((acc, file) => {
